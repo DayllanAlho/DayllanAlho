@@ -158,3 +158,21 @@ As boas práticas de redundância, balanceamento de carga e escalabilidade, comb
  - https://docs.aws.amazon.com/pt_br/wellarchitected/latest/reliability-pillar/resiliency-and-the-components-of-reliability.html
  - https://aws.amazon.com/pt/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&wa-lens-whitepapers.sort-order=desc&wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&wa-guidance-whitepapers.sort-order=desc
  - https://aws.amazon.com/pt/autoscaling/
+
+
+# Agradecimentos
+
+A criação desta arquitetura de solução foi possível graças ao valioso auxílio e colaboração dos seguintes professores:
+
+- Afonso Lelis
+- Cristiano
+- Vitor Hayashi
+- José Romualdo
+- Renato Penha
+
+Além disso, gostaria de agradecer aos discentes que colaboraram com meu ânimo ao longo deste árduo trabalho e com as contribuições de entendimento da arquitetura:
+
+- Giovanna Furlan
+- Vitória Rodrigues
+- Pedro Rezende
+- Lucas Brito
