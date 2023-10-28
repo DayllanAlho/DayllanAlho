@@ -176,3 +176,5 @@ Além disso, gostaria de agradecer aos discentes que colaboraram com meu ânimo 
 - Vitória Rodrigues
 - Pedro Rezende
 - Lucas Brito
+
+### Lembrando que esta arquitetura foi desenvolvida com a ajuda de todas essas pessoas.
