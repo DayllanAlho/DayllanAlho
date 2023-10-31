@@ -1,0 +1,28 @@
+version: '3'
+services:
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    ports:
+      - "2181:2181"
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_SECURE_CLIENT_PORT: 2281
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    ports:
+      - "9092:9092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
+      KAFKA_ADVERTISED_LISTENERS: "PLAINTEXT://kafka:9092"
+    
+  create-topic:
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - kafka
+    entrypoint: bash -c "echo 'Waiting for Kafka to be ready...'; \
+      while ! nc -z kafka 9092; do sleep 1; done; \
+      kafka-topics --create --topic meu-topico --partitions 1 --replication-factor 1 --if-not-exists --zookeeper zookeeper:2181; \
+      echo 'Topic created.'"
