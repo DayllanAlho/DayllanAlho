@@ -1,6 +1,6 @@
 # Docker Compose e Kafka Produtor/Consumidor
 
-![Docker Logo](https://github.com/DayllanAlho/DayllanAlho/blob/main/Docker%20Compose_Fila%20Kafka/Imagens/Logo%20do%20Docker%20Compose.png)
+![Docker Logo](https://github.com/DayllanAlho/DayllanAlho/blob/dev/Kafka/Imagens/Logo%20do%20Docker%20Compose.png)
 
 ## Introdução
 
