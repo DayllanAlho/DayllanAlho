@@ -1,33 +1,39 @@
-from confluent_kafka import Consumer, KafkaError
+from confluent_kafka import Consumer
+from googletrans import Translator
 
-# Configurações do consumidor Kafka
-conf = {
-    'bootstrap.servers': 'kafka:9092',  # Endereço do servidor Kafka
-    'group.id': 'my-consumer-group',
-    'auto.offset.reset': 'earliest'  # Começa a ler a partir do início do tópico
-}
+def translate_text(text):
+    translator = Translator()
+    translated_text = translator.translate(text, src='en', dest='pt')
+    return translated_text.text
 
-print(conf)
+def consume_advice():
+    conf = {
+        'bootstrap.servers': 'localhost:9092',
+        'group.id': 'meu_grupo_consumidor',
+        'auto.offset.reset': 'earliest',
+    }
 
-# Cria um consumidor Kafka
-consumer = Consumer(conf)
+    consumer = Consumer(conf)
+    consumer.subscribe(['ponderada'])
 
-# Tópico do qual você deseja consumir mensagens
-topic = 'meu-topico'  # Use o mesmo tópico que no produtor
+    try:
+        while True:
+            msg = consumer.poll(5.0)
+            if msg is None:
+                continue
+            if msg.error():
+                print(f"Erro ao consumir mensagem: {msg.error()}")
+            else:
+                advice = msg.value().decode('utf-8')
+                print(f"Mensagem em inglês: {advice}\n\n\n")
+                
+                translated_advice = translate_text(advice)
+                print(f"Mensagem traduzida para o português: {translated_advice}\n")
 
-# Se inscreve no tópico
-consumer.subscribe([topic])
+    except KeyboardInterrupt:
+        pass
+    finally:
+        consumer.close()
 
-# Loop para consumir mensagens
-while True:
-    msg = consumer.poll(1.0)
-
-    if msg is None:
-        continue
-    if msg.error():
-        if msg.error().code() == KafkaError._PARTITION_EOF:
-            print('Fim da partição, continuando...')
-        else:
-            print('Erro no consumo: {}'.format(msg.error()))
-    else:
-        print('Mensagem recebida: {}'.format(msg.value()))
+if __name__ == '__main__':
+    consume_advice()

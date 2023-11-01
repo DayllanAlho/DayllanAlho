@@ -1,15 +1,40 @@
+import time
+import requests
 from confluent_kafka import Producer
 
-producer = Producer({'bootstrap.servers': 'kafka:9092'})
+def fetch_advice_from_api():
+    url = "https://api.adviceslip.com/advice"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        return response.json().get("slip", {}).get("advice")
+    else:
+        return None
 
 def delivery_report(err, msg):
     if err is not None:
-        print('Mensagem não enviada: {}'.format(err))
+        print(f'Erro ao entregar a mensagem: {err}')
     else:
-        print('Mensagem enviada para tópico [{}]'.format(msg.topic()))
+        print(f'Conselho enviado ao tópico {msg.topic()} - Partição {msg.partition()}\n')
 
-# Envie uma mensagem para o tópico "meu-topico" (ou o tópico que você criou)
-producer.produce('meu-topico', key='chave', value='Minha mensagem', callback=delivery_report)
+def main():
+    conf = {
+        'bootstrap.servers': 'localhost:9092',
+    }
 
-# Espere até que todos os relatórios de entrega estejam prontos
-producer.flush()
+    producer = Producer(conf)
+
+    while True:
+        advice = fetch_advice_from_api()
+
+        if advice is not None:
+            message = f"Conselho: {advice}"
+            producer.produce('ponderada', value=message, callback=delivery_report)
+            producer.flush()
+            print(message, '\n')
+            time.sleep(5)
+        else:
+            print("Falha ao obter conselho da API")
+
+if __name__ == '__main__':
+    main()
