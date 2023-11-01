@@ -10,7 +10,7 @@ Essa atividade ponderada é um exemplo de como utilizar do Docker Compose para o
 
 O arquivo `docker-compose.yml` descreve a configuração do ambiente. Ele cria dois serviços:
 
-- :zoo: **ZooKeeper**: Um serviço de coordenação para Kafka.
+- :large_blue_circle: **ZooKeeper**: Um serviço de coordenação para Kafka.
 - :whale: **Kafka**: O broker do Kafka.
 
 ### Por que estamos usando Docker Compose?
