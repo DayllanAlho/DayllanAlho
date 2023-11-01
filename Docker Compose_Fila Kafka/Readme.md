@@ -1,6 +1,6 @@
 # Docker Compose e Kafka Produtor/Consumidor
 
-![Docker Logo](https://github.com/DayllanAlho/DayllanAlho/blob/main/Docker%20Compose_Fila%20Kafka/Imagens/image-removebg-preview%20(54).png)
+![Docker Logo](https://github.com/DayllanAlho/DayllanAlho/blob/main/Docker%20Compose_Fila%20Kafka/Imagens/Logo%20do%20Docker%20Compose.png)
 
 ## Introdução
 
@@ -10,14 +10,14 @@ Essa atividade ponderada é um exemplo de como utilizar do Docker Compose para o
 
 O arquivo `docker-compose.yml` descreve a configuração do ambiente. Ele cria dois serviços:
 
-- :large_blue_circle: **ZooKeeper**: Um serviço de coordenação para Kafka.
+- :white_flower: **ZooKeeper**: Um serviço de coordenação para Kafka.
 - :whale: **Kafka**: O broker do Kafka.
 
-### Por que estamos usando Docker Compose?
+### :interrobang: Por que estamos usando Docker Compose?
 
 O Docker Compose é uma ferramenta para definir e executar aplicativos multicontêiner em um ambiente Docker. Neste projeto, usamos o Docker Compose para configurar e executar facilmente um ambiente Kafka local com um único comando.
 
-## Scripts
+## :newspaper: Scripts
 
 ### :snake: `script_produtor.py`
 
@@ -29,7 +29,7 @@ Este script Python é responsável por produzir mensagens em um tópico Kafka ch
 
 - :package: `confluent-kafka`: Uma biblioteca Python para interagir com o Kafka.
 
-#### Como executar o script:
+#### :wrench: Como executar o script:
 
 1. Certifique-se de ter o Docker instalado.
 2. Execute o ambiente Kafka usando o Docker Compose com o comando `docker-compose up`.
@@ -46,7 +46,7 @@ Este script Python é responsável por consumir mensagens do tópico 'ponderada'
 - :package: `confluent-kafka`: Uma biblioteca Python para interagir com o Kafka.
 - :package: `googletrans`: Uma biblioteca Python para tradução de texto.
 
-#### Como executar o script:
+#### :wrench: Como executar o script:
 
 1. Certifique-se de ter o Docker instalado.
 2. Execute o ambiente Kafka usando o Docker Compose com o comando `docker-compose up`.
@@ -58,14 +58,14 @@ Este script Python é responsável por consumir mensagens do tópico 'ponderada'
 
 Certifique-se de ter o Docker instalado em seu computador.
 
-### Bibliotecas utilizadas
+### :books: Bibliotecas utilizadas
 
 Para executar os scripts Python, você pode precisar instalar algumas bibliotecas. Você pode instalá-las usando o comando `pip install <nome_da_biblioteca>`. As bibliotecas usadas são:
 
 - `confluent-kafka`
 - `googletrans`
 
-### Passos para executar o projeto
+### :footprints: Passos para executar o projeto
 
 1. Clone este repositório para sua máquina.
 2. Navegue até o diretório do projeto.
@@ -73,11 +73,11 @@ Para executar os scripts Python, você pode precisar instalar algumas biblioteca
 4. Abra um terminal e execute `python script_produtor.py` para produzir mensagens.
 5. Abra outro terminal e execute `python script_consumidor.py` para consumir mensagens e traduzi-las.
 
-### Observações
+### :mag: Observações
 
 - Você pode optar por executar o projeto em uma máquina virtual, mas preferi fazer com o VS Code, pois tinha mais afinidade com essa IDE.
 
-## Referências
+## :eyeglasses: Referências
 
 - [Docker Compose Documentação](https://docs.docker.com/compose/)
 - [Confluent Kafka Python](https://docs.confluent.io/platform/current/clients/confluent-kafka-python/html/index.html)
