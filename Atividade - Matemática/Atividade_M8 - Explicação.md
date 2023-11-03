@@ -199,7 +199,7 @@ v. **Você identifica algum potencial significado dos clusters encontrados?**
 
 Com base nos dados e na divisão dos clusters nas duas iterações, podemos obter alguns insights:
 
-#### Na Média dos Clusters (Após a 1ª Iteração):
+#### <i><u>Na Média dos Clusters:</i></u>
 
 - **Cluster 1 (Marcos, Ana, Silvio):**
   - Tem a média mais alta de cabelo (5.33), indicando cabelos de maior comprimento.
@@ -216,7 +216,7 @@ Com base nos dados e na divisão dos clusters nas duas iterações, podemos obte
   - Tem uma média intermediária de peso (68.25).
   - Tem uma média mais alta de idade (39.75), indicando idade mais avançada.
 
-### Na 3ª Iteração (Após a 3ª Iteração):
+#### <u><i>Na 3ª Iteração (Após a 3ª Iteração):</i></u>
 
 - **Centróide 1 (x1 - Ronaldo, Amanda, Marta):**
   - Tem a média de cabelo intermediário (4.00), indicando cabelos de comprimento relativamente curto.
