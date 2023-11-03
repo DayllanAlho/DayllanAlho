@@ -197,4 +197,47 @@ Os centroides após a primeira iteração foram calculados da seguinte forma:
 
 v. **Você identifica algum potencial significado dos clusters encontrados?**
 
-Com base nos dados fornecidos, não é possível identificar um significado específico para os clusters. Os clusters são formados com base nas características (cabelo, peso, idade) e nas distâncias entre as pessoas e os centroides. No entanto, sem informações contextuais adicionais, é difícil atribuir significados específicos a esses clusters. Eles representam grupos de pessoas que são mais semelhantes entre si em termos de suas características observadas, mas o significado desses grupos dependeria do contexto da aplicação em que o algoritmo está sendo usado.
+Com base nos dados e na divisão dos clusters nas duas iterações, podemos obter alguns insights:
+
+#### Na Média dos Clusters (Após a 1ª Iteração):
+
+- **Cluster 1 (Marcos, Ana, Silvio):**
+  - Tem a média mais alta de cabelo (5.33), indicando cabelos de maior comprimento.
+  - Tem a média mais alta de peso (90.67), indicando um peso mais alto.
+  - Tem a média de idade como segunda mais alta (38.33), sugerindo que esse cluster contém uma média intermediária de idade.
+
+- **Cluster 2 (Amanda, Marta):**
+  - Tem a média mais baixa de cabelo (5.00), indicando cabelos de comprimento baixo.
+  - Tem a média mais baixa de peso (22.00), indicando um peso mais baixo.
+  - Tem a média mais baixa de idade (4.50), sugerindo que esse cluster contém pessoas mais jovens.
+
+- **Cluster 3 (Ronaldo, Josias, Rose, Claudio):**
+  - Tem uma média intermediária de cabelo (5.25), indicando cabelos de comprimento médio.
+  - Tem uma média intermediária de peso (68.25).
+  - Tem uma média mais alta de idade (39.75), indicando idade mais avançada.
+
+### Na 3ª Iteração (Após a 3ª Iteração):
+
+- **Centróide 1 (x1 - Ronaldo, Amanda, Marta):**
+  - Tem a média de cabelo intermediário (4.00), indicando cabelos de comprimento relativamente curto.
+  - Tem a média mais baixa de peso (28.33), indicando um peso mais baixo.
+  - Tem a média mais baixa de idade (6.33), sugerindo que esse cluster contém pessoas mais jovens.
+
+- **Centróide 2 (x2 - Ana, Rose, Claudio):**
+  - Tem uma média mais alta de cabelo (9.33), indicando cabelos de comprimento longo.
+  - Tem uma média intermediária de peso (74.33), indicando um peso intermediário.
+  - Tem uma média intermediária de idade (37.67), sugerindo uma idade intermediária.
+
+- **Centróide 3 (x3 - Marcos, Josias, Silvio):**
+  - Tem a média mais baixa de cabelo (2.33), indicando cabelos de comprimento mais curto.
+  - Tem a média mais alta de peso (93.67), indicando um peso mais alto.
+  - Tem uma média mais alta de idade (50.33), sugerindo que esse cluster contém pessoas mais velhas.
+
+Portanto, com base na divisão dos clusters, podemos inferir que:
+
+- O Cluster 1 (x1) após a 3ª iteração parece conter pessoas mais jovens, com cabelos de comprimento relativamente curto, peso mais baixo.
+
+- O Cluster 2 (x2) após a 3ª iteração parece conter pessoas com idade intermediária, cabelos de comprimento longo e peso intermediário.
+
+- O Cluster 3 (x3) após a 3ª iteração parece conter pessoas mais velhas, com cabelos de comprimento mais curto e peso mais alto.
+
