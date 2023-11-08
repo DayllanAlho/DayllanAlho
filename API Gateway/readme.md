@@ -156,14 +156,6 @@ O segundo teste simula uma solicitação com credenciais inválidas, incluindo u
 
 O terceiro teste simula uma solicitação sem credenciais, incluindo um corpo JSON.
 
-### 3.4. Verificação do Formato JSON
-
-O quarto teste simula uma solicitação com credenciais válidas, mas um corpo JSON mal formatado.
-
-### 3.5. Autenticação e Verificação do Formato JSON
-
-O quinto teste simula uma solicitação com credenciais válidas e um corpo JSON formatado corretamente.
-
 ## 4. Endpoint REST
 
 O Lambda foi integrado com o API Gateway para criar um endpoint REST. Você pode acessar o endpoint REST no seguinte URL:
@@ -174,7 +166,10 @@ https://xxfox8dz2e.execute-api.us-east-1.amazonaws.com/default/Lambda_Ponderada2
 
 Você pode usar o endpoint REST para autenticar e processar solicitações com credenciais válidas. Certifique-se de incluir o cabeçalho de autorização com o formato 'Basic usuario:senha'.
 
-## Autor
+## Recapitulando que os prints foram disponibilizados pelo Lucas Britto e a execução dessa atividade foi desenvolvida juntamente com o 
+- <b>Pedro Rezende</b>, 
+- <b>Izabella Frias</b>, 
+- <b>Lucas Britto</b>, 
+- <b>Giovanna Furlan</b>. 
 
-# Recapitulando que os prints foram disponibilizados pelo Lucas Britto e a execução dessa atividade foi desenvolvida juntamente com o Pedro Rezende, Izabella Frias, Lucas Britto, Giovanna Furlan. Sem eles nada disso seria possível.
-- ## .TNCE
+## Sem eles nada disso seria possível.
