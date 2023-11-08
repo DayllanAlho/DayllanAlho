@@ -10,15 +10,14 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
 ### 1.1 - Criação do Lambda
 
 1. **Seleção do Serviço Lambda:**
-   - Acesse o Console da AWS.
-   - Na página inicial, clique em "Serviços" e selecione "Lambda" sob "Computação".
+   - Acesse o Laboratório da AWS.
+   - Na página inicial, clique em "Serviços" e selecione o serviço "Lambda".
 
 ![Seleção do Serviço Lambda](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/1%20-%20Sele%C3%A7%C3%A3o%20do%20servi%C3%A7o%20-%20Lambda.png)
 
 2. **Criação da Função Lambda:**
    - No painel do Lambda, clique em "Funções" no painel de navegação à esquerda.
    - Clique no botão "Criar função" no canto superior direito.
-   - Escolha a opção "Autor de função personalizado" e clique em "Avançar".
 
 ![Criação da Função Lambda](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/2%20-%20Cria%C3%A7%C3%A3o%20da%20fun%C3%A7%C3%A3o%20lambda.png)
 
@@ -26,6 +25,9 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
    - Preencha um nome descritivo para sua função Lambda, por exemplo, "Lambda_Ponderada2".
    - Selecione "Python 3.11" como o tempo de execução.
    - Escolha ou crie uma função de autor que tenha permissões para o que você precisa.
+        - A recomendação é que a flag da arquitetura para o código da função deva ser a x86_64, pois nesse caso, como estamos em um ambiente de teste, não há a interferência. Apesar que na produção, o arm64, seja a melhor opção.
+        - Selecione a opção de usar uma função existente e deixa a segurança como Open (devido ser um ambiente de teste);
+        - A função existente precisa ser a Lab Role.
    - Clique em "Criar função" no canto inferior direito.
 
 ![Nomeando e Configurando a Função Lambda](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/3%20-%20Nomeando%20e%20configurando%20fun%C3%A7%C3%A3o.png)
@@ -35,16 +37,16 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
 
 ![Exemplo de Criação de uma Função Lambda](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/4%20-%20Exemplo%20de%20cria%C3%A7%C3%A3o%20de%20fun%C3%A7%C3%A3o%20lambda.png)
 
-5. **Visão Geral da Função:**
-   - Clique em "Salvar" no canto superior direito para salvar a função Lambda.
 
-![Visão Geral da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/5%20-%20Vis%C3%A3o%20geral%20da%20fun%C3%A7%C3%A3o.png)
 
 ### 1.2 - Configuração do API Gateway
 
-6. **Adição de Gatilho + Seleção de API Gateway:**
-   - No painel de detalhes da função Lambda, role para baixo até a seção "Designer".
+- 5. **Visão Geral da Função:**
    - Clique em "Adicionar gatilho" e selecione "API Gateway" como o gatilho.
+
+![Visão Geral da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/5%20-%20Vis%C3%A3o%20geral%20da%20fun%C3%A7%C3%A3o.png)
+6. **Adição de Gatilho + Seleção de API Gateway:** 
+   - Na configuração do gatilho selecione API Gateway
 
 ![Adição de Gatilho + Seleção de API Gateway](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/6%20-%20Adi%C3%A7%C3%A3o%20de%20gatilho%20%2B%20sele%C3%A7%C3%A3o%20de%20API%20Gateway.png)
 
@@ -202,4 +204,5 @@ Você pode usar o endpoint REST para autenticar e processar solicitações com c
 
 ## Autor
 
-[Seu Nome]
+# Recapitulando que os prints foram disponibilizados pelo Lucas Britto e a execução dessa atividade foi desenvolvida juntamente com o Pedro Rezende, Izabella Frias, Lucas Britto, Giovanna Furlan. Sem eles nada disso seria possível.
+- ## .TNCE
