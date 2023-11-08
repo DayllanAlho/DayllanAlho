@@ -41,7 +41,7 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
 
 ### 1.2 - Configuração do API Gateway
 
-- 5. **Visão Geral da Função:**
+5. **Visão Geral da Função:**
    - Clique em "Adicionar gatilho" e selecione "API Gateway" como o gatilho.
 
 ![Visão Geral da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/5%20-%20Vis%C3%A3o%20geral%20da%20fun%C3%A7%C3%A3o.png)
@@ -62,7 +62,7 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
 ![API Gateway Criada](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/8%20-%20API%20Gateway%20criada.png)
 
 9. **Endpoint da API Gateway:**
-   - Na seção "Designer" da função Lambda, você verá o gatilho da API Gateway listado. Clique no nome da API (por exemplo, "API_Ponderada2") para acessar as configurações da API.
+   - Na seção "Designer" da função Lambda, você verá o gatilho da API Gateway listado. Clique no nome da API para acessar as configurações da API, depois clique em configurações, logo abaixo.
 
 ![Endpoint da API Gateway](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/9%20-%20endpoint%20da%20API%20Gateway.png)
 
@@ -78,81 +78,53 @@ Este guia é destinado a fins de aprendizado e não deve ser seguido diretamente
     - Na página de configuração do método POST, role para baixo até a seção "Configurações de Integração".
     - No campo "Função de AWS Lambda", clique no botão de edição e selecione a função Lambda que você criou.
 
-![ARN da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway
-
-### 1.4 - Configuração de Autorização
-
-11. **Buscando o ARN da Função:**
-    - Na página de configuração do método POST, role para baixo até a seção "Configurações de Integração".
-    - No campo "Função de AWS Lambda", clique no botão de edição e selecione a função Lambda que você criou.
-
 ![ARN da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/14%20-%20Buscando%20o%20ARN%20da%20fun%C3%A7%C3%A3o.png)
 
-12. **Adicionando Permissão:**
-    - Após selecionar a função, clique em "Salvar" e, em seguida, clique em "Salvar" novamente na página do método POST.
-    - Clique em "Método de Atualização" para atualizar as configurações do método POST.
+### 1.4 - Endpoint REST
 
-![Adicionando Permissão](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/16%20-%20Adicionando%20permiss%C3%A3o.png)
-
-13. **Buscando o ARN da Função:**
-    - No painel de navegação à esquerda da página da API, clique em "Autorização".
-    - Clique em "Criar e associar permissões".
-
-![Buscando o ARN da Função](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/16%20-%20Adicionando%20permiss%C3%A3o.png)
-
-14. **Adicionando Permissão:**
-    - Na seção "Definir permissões", defina o tipo de autorização para "Sigv4".
-    - Clique em "Salvar" para criar as permissões.
-
-![Adicionando Permissão](URL_da_sua_imagem)
-
-### 1.5 - Endpoint REST
-
-15. **Buscando o URL da API Gateway:**
+12. **Buscando o URL da API Gateway:**
     - Volte para a página principal da sua API.
-    - No painel de navegação à esquerda, selecione "Stages".
-    - Clique no nome do estágio (por exemplo, "Prod") para acessar as configurações do estágio.
+    - Selecione configuração e pegue a API endpoint.
 
 ![URL da API Gateway](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/21%20-%20buscando%20a%20url%20da%20API%20Gateway.png)
 
-16. **Depois do Deploy, Teste do POST no Thunder:**
-    - No painel de configurações do estágio, você encontrará o URL de invocação do seu endpoint REST. Copie este URL para uso posterior.
+13. **Depois do Deploy, Teste do POST no Thunder:**
+    - Volte para a área código e clique em deploy.
+    - Após realizado o deploy, copie o link da API (URL) e cole na barra de endereço do seu browser.
 
-![Depois do Deploy, Teste do POST no Thunder](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/26%20-%20Depois%20do%20deploy%2C%20teste%20do%20post%20no%20thunder.png)
+## 1.5 - Teste do Lambda
 
-## 1.6 - Teste do Lambda
-
-17. **Criação do Script Python:**
+14. **Criação do Script Python:**
     - Crie um script Python para testar o Lambda. O código Python deve incluir funções que simulam solicitações com diferentes cenários.
 
 ![Criação do Script Python](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/27%20-%20cria%C3%A7%C3%A3o%20do%20script%20python.png)
 
-18. **No Auth, Verificando o Username e o Password:**
-    - Crie uma função Python para testar autenticação bem-sucedida, onde você verifica o nome de usuário e senha.
+15. **Instale a extensão Thunder no VSCode, e na área do Auth, Verificando o Username e o Password:**
+    - Crie uma função Python para testar autenticação bem-sucedida, onde você verifica o nome de usuário e senha na extensão thunder.
 
 ![No Auth, Verificando o Username e o Password](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/29%20-%20No%20auth%2C%20verificando%20o%20username%20e%20o%20password.png)
 
-19. **Username e Password Corretos:**
+16. **Username e Password Corretos:**
     - Crie uma função Python para testar autenticação malsucedida com nome de usuário e senha corretos.
 
 ![Username e Password Corretos](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/30%20-%20username%20e%20password%2C%20ok.png)
 
-20. **Username e Password Não Autorizado:**
+17. **Username e Password Não Autorizado:**
     - Crie uma função Python para testar autenticação malsucedida com nome de usuário e senha não autorizados.
 
 ![Username e Password Não Autorizado](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/31%20-%20username%20e%20password%2C%20not%20ok.png)
 
-21. **Configuração do Teste:**
+18. **Configuração do Teste:**
     - Configure o ambiente de teste Python, incluindo a criação de eventos de teste que correspondam aos cenários que você deseja testar.
 
 ![Configuração do Teste](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/32%20-%20config.%20teste.png)
 
-22. **Criar Novo Evento de Teste:**
+19. **Criar Novo Evento de Teste:**
     - Crie novos eventos de teste que representem os cenários desejados. Certifique-se de passar os parâmetros corretos para simular diferentes tipos de solicitações.
 
 ![ Novo Evento de Teste](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/33%20-%20criar%20novo%20evento%20de%20teste.png)
 
-23. **Passando os Parâmetros para Acionar um Acesso Não Autorizado:**
+20. **Passando os Parâmetros para Acionar um Acesso Não Autorizado:**
     - Execute seus testes Python e verifique se os resultados correspondem às expectativas.
 
 ![Parâmetros para Acionar um Acesso Não Autorizado](https://github.com/DayllanAlho/DayllanAlho/blob/dev/API%20Gateway/assets/34%20-%20Passando%20os%20par%C3%A2metros%20para%20acionar%20um%20acesso%20n%C3%A3o%20autorizado.png)
