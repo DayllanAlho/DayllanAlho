@@ -46,7 +46,7 @@ pip install -r requirements.txt
 1. Clone este repositório para sua máquina.
 2. Navegue até o diretório do projeto:
 ```
-cd Ponderada-OpenWeather
+cd Ponderada 3 - sem2 - Ponderada-OpenWeather
 ```
 3. Execute o aplicativo Flask:
 
